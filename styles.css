@@ -1,0 +1,167 @@
+/* Reset basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f8f4; /* Light beige background */
+  color: #333; /* Dark grey text */
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #a0c8b4; /* Light teal color from the logo */
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  padding: 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  color: white;
+}
+
+.cta-btn {
+  background-color: #f4d9a6; /* Soft coral accent color */
+  padding: 10px 20px;
+  color: #7f3c1a; /* Accent text color */
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+/* About Section */
+.about {
+  background-color: #ffffff; /* White background */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #7f3c1a; /* Accent color for headings */
+}
+
+.about p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555; /* Dark grey text */
+}
+
+.about img {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+/* Gallery Section */
+.gallery {
+  background-color: #f9f9f9; /* Light grey background */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #7f3c1a; /* Accent color */
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Activities Section */
+.activities {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #ffffff; /* White background */
+}
+
+.activities h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #7f3c1a; /* Accent color */
+}
+
+.activity {
+  margin-bottom: 30px;
+}
+
+.activity img {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.activity p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #555; /* Dark grey text */
+}
+
+/* Contact Section */
+.contact {
+  background-color: #7f3c1a; /* Warm earthy color */
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.contact .cta-btn {
+  background-color: #f4d9a6; /* Soft coral accent color */
+  color: #7f3c1a;
+  border: 2px solid #7f3c1a;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #7f3c1a; /* Warm earthy color */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
