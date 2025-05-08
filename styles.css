@@ -1,4 +1,4 @@
-/* Reset basic styles */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,9 +6,61 @@
 }
 
 body {
-  font-family: "Arial", sans-serif;
-  background-color: #f0f8f4; /* Light beige background */
-  color: #333; /* Dark grey text */
+  font-family: "Poppins", sans-serif; /* Clean, modern font */
+  background-color: #f0f8f4; /* Light, airy background */
+  color: #333;
+  line-height: 1.6;
+  padding-top: 80px; /* Space for sticky navbar */
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: rgba(127, 60, 26, 0.9); /* Warm transparent background */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); /* Blur effect for a futuristic look */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links li {
+  display: inline;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.navbar-links a:hover {
+  background-color: #f4d9a6; /* Soft coral accent color */
+  color: #7f3c1a;
+  border-radius: 5px;
 }
 
 /* Hero Section */
@@ -16,78 +68,112 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: #a0c8b4; /* Light teal color from the logo */
+  background-image: url("./public/assets/hero-image.jpg");
+  background-size: cover;
+  background-position: center;
   color: white;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-attachment: fixed;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  background: rgba(0, 0, 0, 0.4);
   padding: 20px;
   text-align: center;
+  animation: fadeInText 2s ease-in-out;
 }
 
 .hero h1 {
   font-size: 4rem;
-  font-weight: bold;
-  margin: 0;
+  font-weight: 700;
   color: white;
+  letter-spacing: 3px;
 }
 
 .hero p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin: 20px 0;
   color: white;
 }
 
 .cta-btn {
-  background-color: #f4d9a6; /* Soft coral accent color */
-  padding: 10px 20px;
-  color: #7f3c1a; /* Accent text color */
+  background-color: #f4d9a6;
+  padding: 12px 25px;
+  color: #7f3c1a;
   text-decoration: none;
-  font-size: 1.2rem;
-  border-radius: 5px;
+  font-size: 1.3rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #7f3c1a;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* About Section */
 .about {
-  background-color: #ffffff; /* White background */
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
+  background-color: #ffffff;
 }
 
 .about h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 20px;
-  color: #7f3c1a; /* Accent color for headings */
+  color: #7f3c1a;
 }
 
 .about p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  color: #555; /* Dark grey text */
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #555;
+  line-height: 1.6;
 }
 
 .about img {
-  width: 100%;
+  width: 80%;
   max-width: 800px;
+  border-radius: 15px;
   margin-top: 20px;
 }
 
 /* Gallery Section */
 .gallery {
-  background-color: #f9f9f9; /* Light grey background */
-  padding: 50px 20px;
-  text-align: center;
+  background-color: #f9f9f9;
+  padding: 60px 20px;
 }
 
 .gallery h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #7f3c1a; /* Accent color */
+  font-size: 2.8rem;
+  color: #7f3c1a;
+  margin-bottom: 30px;
 }
 
 .gallery-grid {
@@ -99,40 +185,53 @@ body {
 .gallery img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
 }
 
 /* Activities Section */
 .activities {
-  padding: 50px 20px;
+  padding: 60px 20px;
+  background-color: #ffffff;
   text-align: center;
-  background-color: #ffffff; /* White background */
 }
 
 .activities h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #7f3c1a; /* Accent color */
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  color: #7f3c1a;
 }
 
 .activity {
+  display: inline-block;
+  width: 30%;
   margin-bottom: 30px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .activity img {
   width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-  border-radius: 10px;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 15px;
 }
 
 .activity p {
   font-size: 1.1rem;
-  margin-top: 10px;
-  color: #555; /* Dark grey text */
+  color: #555;
 }
 
-/* Contact Section */
+.activity:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------ Contact Section ------------ */
 .contact {
   background-color: #7f3c1a; /* Warm earthy color */
   color: white;
@@ -156,6 +255,17 @@ body {
   background-color: #f4d9a6; /* Soft coral accent color */
   color: #7f3c1a;
   border: 2px solid #7f3c1a;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact .cta-btn:hover {
+  background-color: #7f3c1a;
+  color: white;
+  transform: scale(1.1);
 }
 
 /* Footer Section */
