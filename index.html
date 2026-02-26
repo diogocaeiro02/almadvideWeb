@@ -16,12 +16,20 @@
     <nav class="navbar">
       <div class="navbar-container">
         <a href="#home" class="logo">Alma d'Vide</a>
+
         <ul class="navbar-links">
-          <li><a href="#about">A Nossa História</a></li>
+          <li><a href="#about">História</a></li>
+          <li><a href="#amenities">Comodidades</a></li>
           <li><a href="#gallery">Galeria</a></li>
-          <li><a href="#activities">Atividades</a></li>
-          <li><a href="#contact">Contacte-nos</a></li>
+          <li><a href="#activities">Experiências</a></li>
+          <li><a href="#contact" class="nav-cta">Reservar</a></li>
         </ul>
+
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </nav>
 
@@ -219,6 +227,33 @@
 
     <script>
       lucide.createIcons();
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const navbar = document.querySelector(".navbar");
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".navbar-links");
+
+        // Scroll effect
+        window.addEventListener("scroll", function () {
+          navbar.classList.toggle("scrolled", window.scrollY > 50);
+        });
+
+        // Toggle mobile menu
+        hamburger.addEventListener("click", function () {
+          navLinks.classList.toggle("active");
+          hamburger.classList.toggle("open");
+          document.body.classList.toggle("menu-open");
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll(".navbar-links a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+            hamburger.classList.remove("open");
+            document.body.classList.remove("menu-open");
+          });
+        });
+      });
     </script>
   </body>
 </html>
