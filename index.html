@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alma d'Vide</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Navbar -->
@@ -24,18 +28,46 @@
     <header id="home" class="hero">
       <div class="hero-overlay">
         <h1>Bem-vindo a Alma d'Vide</h1>
-        <p>Descubra a tranquilidade e beleza do Alentejo</p>
+        <p>Descubra a tranquilidade e a beleza do Alto Alentejo</p>
         <a href="#about" class="cta-btn">Saiba Mais</a>
       </div>
     </header>
 
     <!-- About Us / A Nossa História -->
     <section id="about" class="about">
-      <h2>A Nossa História</h2>
-      <p>
-        Alma d'Vide é um lugar onde a tranquilidade e a natureza se encontram...
-      </p>
-      <img src="./public/assets/outside-3.png" alt="About Alma d'Vide" />
+      <div class="about-text">
+        <span class="section-tag">Uma Experiência Autêntica</span>
+        <h2>Onde o tempo abranda e a alma respira</h2>
+        <p>
+          No coração do Alto Alentejo, Alma d'Vide nasce do desejo de criar um
+          refúgio onde o silêncio, a natureza e o conforto coexistem em perfeita
+          harmonia.
+        </p>
+        <p>
+          Aqui, cada detalhe foi pensado para proporcionar momentos
+          inesquecíveis — desde os amanheceres dourados até às noites tranquilas
+          sob um céu estrelado.
+        </p>
+
+        <div class="about-highlights">
+          <div>
+            <h3>Natureza</h3>
+            <p>Paisagens intocadas e ar puro.</p>
+          </div>
+          <div>
+            <h3>Conforto</h3>
+            <p>Design acolhedor e elegante.</p>
+          </div>
+          <div>
+            <h3>Exclusividade</h3>
+            <p>Privacidade e tranquilidade absoluta.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-image">
+        <img src="./public/assets/outside-3.png" alt="Alma d'Vide Exterior" />
+      </div>
     </section>
 
     <!-- Gallery Section -->
@@ -50,26 +82,49 @@
 
     <!-- Activities Section -->
     <section id="activities" class="activities">
-      <h2>Atividades</h2>
-      <div class="activity">
-        <img src="./public/assets/portalegre.png" alt="Activity 1" />
-        <p>Explore a beleza natural da região.</p>
-      </div>
-      <div class="activity">
-        <img src="./public/assets/coudelaria.png" alt="Activity 2" />
-        <p>Aventure-se em passeios e trilhos.</p>
-      </div>
-      <div class="activity">
-        <img src="./public/assets/termas.png" alt="Activity 3" />
-        <p>Relaxe nas termas locais.</p>
-      </div>
-      <div class="activity">
-        <img src="./public/assets/baloes.png" alt="Activity 4" />
-        <p>Aventure-se em passeios de balão.</p>
-      </div>
-      <div class="activity">
-        <img src="./public/assets/cascatas.png" alt="Activity 5" />
-        <p>Descubra as cascatas da região.</p>
+      <span class="section-tag center">Descubra a Região</span>
+      <h2>Experiências Inesquecíveis</h2>
+
+      <div class="activities-grid">
+        <div class="activity-card">
+          <img src="./public/assets/portalegre.png" alt="Portalegre" />
+          <div class="activity-content">
+            <h3>Portalegre</h3>
+            <p>Descubra a história e a autenticidade da região.</p>
+          </div>
+        </div>
+
+        <div class="activity-card">
+          <img src="./public/assets/coudelaria.png" alt="Coudelaria" />
+          <div class="activity-content">
+            <h3>Passeios Equestres</h3>
+            <p>Explore trilhos naturais a cavalo.</p>
+          </div>
+        </div>
+
+        <div class="activity-card">
+          <img src="./public/assets/termas.png" alt="Termas" />
+          <div class="activity-content">
+            <h3>Termas</h3>
+            <p>Relaxe nas águas termais da região.</p>
+          </div>
+        </div>
+
+        <div class="activity-card">
+          <img src="./public/assets/baloes.png" alt="Balões" />
+          <div class="activity-content">
+            <h3>Balão de Ar Quente</h3>
+            <p>Veja o Alentejo de uma perspetiva única.</p>
+          </div>
+        </div>
+
+        <div class="activity-card">
+          <img src="./public/assets/cascatas.png" alt="Cascatas" />
+          <div class="activity-content">
+            <h3>Cascatas Naturais</h3>
+            <p>Descubra recantos escondidos da natureza.</p>
+          </div>
+        </div>
       </div>
     </section>
 
