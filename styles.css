@@ -199,6 +199,11 @@ img {
   content: "";
   position: absolute;
   inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.4)
+  );
 }
 
 .hero-overlay {
@@ -206,6 +211,7 @@ img {
   text-align: center;
   color: white;
   max-width: 800px;
+  z-index: 2;
 }
 
 .hero h1 {
@@ -513,6 +519,10 @@ img {
     flex-direction: column;
   }
 
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -634,5 +644,43 @@ img {
 
   .gallery-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero {
+    height: 85vh;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .hero-overlay {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .cta-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .amenities-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .amenity {
+    padding: 30px 20px;
   }
 }
