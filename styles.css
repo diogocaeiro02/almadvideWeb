@@ -25,6 +25,7 @@ body {
 
 section {
   padding: 110px 12%;
+  scroll-margin-top: 80px;
 }
 
 h1,
@@ -201,28 +202,27 @@ img {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.4)
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.45)
   );
 }
 
 .hero-overlay {
   position: relative;
-  text-align: center;
-  color: white;
-  max-width: 800px;
   z-index: 2;
 }
 
 .hero h1 {
   font-size: 3.5rem;
   margin-bottom: 25px;
+  color: #f8f6f2;
 }
 
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 35px;
   font-weight: 300;
+  color: #f8f6f2;
 }
 
 .hero-tag {
@@ -630,26 +630,27 @@ img {
 }
 
 @media (max-width: 600px) {
+  /* ===== GLOBAL ===== */
+
   section {
-    padding: 90px 6%;
+    padding: 70px 6%;
   }
 
-  .hero h1 {
-    font-size: 2.2rem;
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
   }
 
-  .activities-grid {
-    grid-template-columns: 1fr;
+  .section-tag {
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
   }
 
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
+  /* ===== HERO ===== */
 
   .hero {
     height: 85vh;
     padding: 0 20px;
-    text-align: center;
   }
 
   .hero-overlay {
@@ -657,12 +658,13 @@ img {
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.9rem;
     line-height: 1.2;
   }
 
   .hero p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
   }
 
   .hero-buttons {
@@ -673,7 +675,24 @@ img {
   .cta-btn {
     width: 100%;
     text-align: center;
+    padding: 12px 20px;
   }
+
+  /* ===== ABOUT ===== */
+
+  .about {
+    gap: 40px;
+  }
+
+  .about-highlights {
+    gap: 20px;
+  }
+
+  .about-highlights div {
+    padding: 18px;
+  }
+
+  /* ===== AMENITIES ===== */
 
   .amenities-grid {
     grid-template-columns: 1fr;
@@ -682,5 +701,28 @@ img {
 
   .amenity {
     padding: 30px 20px;
+  }
+
+  .amenity i {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* ===== GALLERY ===== */
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+  }
+
+  /* ===== ACTIVITIES ===== */
+
+  .activities-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .activity-card img {
+    height: 200px;
   }
 }
