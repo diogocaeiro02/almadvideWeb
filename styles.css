@@ -188,7 +188,11 @@ img {
 }
 /* ===== HERO ===== */
 .hero {
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100dvh; /* unidade moderna que resolve mobile */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: url("./public/assets/outside-2.png") center/cover no-repeat;
   display: flex;
   align-items: center;
