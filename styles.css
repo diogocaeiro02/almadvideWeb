@@ -193,7 +193,7 @@ img {
   }
 }
 
-/* ===== ABOUT ===== */
+/* ================== ABOUT ================== */
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -246,7 +246,56 @@ img {
   font-size: 1.2rem;
 }
 
-/* ===== GALLERY ===== */
+/* ================== Amenities ================== */
+.amenities {
+  background: #ffffff;
+  text-align: center;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin-top: 70px;
+}
+
+.amenity {
+  padding: 40px 30px;
+  border-radius: 20px;
+  transition: 0.4s ease;
+}
+
+.amenity:hover {
+  background: #f8f6f2;
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+.amenity-icon {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.amenity h3 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 10px;
+  color: #3f5c45;
+}
+
+.amenity p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.amenity i {
+  width: 40px;
+  height: 40px;
+  stroke-width: 1.5;
+  color: #3f5c45;
+  margin-bottom: 20px;
+}
+
+/* ================== GALLERY ================== */
 .gallery {
   background-color: #f1eee8;
 }
@@ -287,7 +336,7 @@ img {
   transform: scale(1.08);
 }
 
-/* ===== ACTIVITIES ===== */
+/* ================== ACTIVITIES ================== */
 .activities {
   text-align: center;
   background: #f1eee8;
@@ -338,7 +387,7 @@ img {
   color: #555;
 }
 
-/* ===== CONTACT ===== */
+/* ================== CONTACT ================== */
 .contact {
   text-align: center;
   background: linear-gradient(135deg, #3f5c45, #2d4031);
@@ -355,7 +404,7 @@ img {
   font-weight: 300;
 }
 
-/* ===== FOOTER ===== */
+/* ================== FOOTER ================== */
 .footer {
   text-align: center;
   padding: 30px;
@@ -364,7 +413,7 @@ img {
   font-size: 0.9rem;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ================== RESPONSIVE ================== */
 @media (max-width: 1024px) {
   .about {
     grid-template-columns: 1fr;
