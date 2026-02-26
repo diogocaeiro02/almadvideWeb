@@ -197,6 +197,7 @@ img {
   align-items: center;
   justify-content: center;
   position: relative;
+  padding-top: 80px;
 }
 
 .hero::after {
@@ -211,6 +212,7 @@ img {
 }
 
 .hero-overlay {
+  padding: 0 20px;
   position: relative;
   z-index: 2;
 }
@@ -661,13 +663,13 @@ img {
   }
 
   .hero h1 {
-    font-size: 1.9rem;
+    font-size: 2rem;
     line-height: 1.2;
   }
 
   .hero p {
-    font-size: 0.95rem;
-    margin-bottom: 25px;
+    font-size: 1rem;
+    margin-bottom: 15px;
   }
 
   .hero-buttons {
