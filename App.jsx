@@ -21,11 +21,13 @@ import {
   X,
 } from 'lucide-react';
 
+const asset = (file) => `${import.meta.env.BASE_URL}assets/${file}`;
+
 const houseGallery = [
-  { src: '/assets/outside-3.png', alt: 'Exterior da Alma d\'Vide com piscina' },
-  { src: '/assets/living-room-2.png', alt: 'Sala da Alma d\'Vide' },
-  { src: '/assets/room-1.png', alt: 'Quarto da Alma d\'Vide' },
-  { src: '/assets/outside-2.png', alt: 'Zona exterior da Alma d\'Vide' },
+  { src: asset('outside-3.png'), alt: 'Exterior da Alma d\'Vide com piscina' },
+  { src: asset('living-room-2.png'), alt: 'Sala da Alma d\'Vide' },
+  { src: asset('room-1.png'), alt: 'Quarto da Alma d\'Vide' },
+  { src: asset('outside-2.png'), alt: 'Zona exterior da Alma d\'Vide' },
 ];
 
 const experiences = [
@@ -33,42 +35,42 @@ const experiences = [
     kicker: 'Bem-estar',
     title: 'Termas da Sulfúrea',
     text: 'Um dos recantos mais singulares de Cabeço de Vide — perfeito para abrandar e aproveitar a envolvente termal.',
-    image: '/assets/termas.png',
+    image: asset('termas.png'),
     map: 'https://www.google.com/maps/search/?api=1&query=Termas+da+Sulfurea+Cabeco+de+Vide',
   },
   {
     kicker: 'Património local',
     title: 'Cabeço de Vide',
     text: 'Passeie pelo centro histórico, entre a fortaleza, a Torre do Relógio, o Pelourinho e ruas de traço alentejano.',
-    image: '/assets/cabeco-de-vide.jpg',
+    image: asset('cabeco-de-vide.jpg'),
     map: 'https://www.google.com/maps/search/?api=1&query=Centro+Historico+Cabeco+de+Vide',
   },
   {
     kicker: 'Experiência equestre',
     title: 'Coudelaria de Alter',
     text: 'Uma experiência ligada ao cavalo Lusitano e a uma das tradições mais marcantes desta região do Alentejo.',
-    image: '/assets/coudelaria.png',
+    image: asset('coudelaria.png'),
     map: 'https://www.google.com/maps/search/?api=1&query=Coudelaria+de+Alter',
   },
   {
     kicker: 'Cultura',
     title: 'Portalegre',
     text: 'Descubra o centro histórico, a arquitetura da cidade e o Museu da Tapeçaria de Portalegre – Guy Fino.',
-    image: '/assets/portalegre.png',
+    image: asset('portalegre.png'),
     map: 'https://www.google.com/maps/search/?api=1&query=Portalegre+Portugal',
   },
   {
     kicker: 'Aldeia medieval',
     title: 'Marvão',
     text: 'Uma escapadinha entre muralhas, pedra e paisagem aberta sobre a Serra de São Mamede.',
-    image: '/assets/marvao.jpg',
+    image: asset('marvao.jpg'),
     map: 'https://www.google.com/maps/search/?api=1&query=Marvao+Portugal',
   },
   {
     kicker: 'Passeio',
     title: 'Castelo de Vide',
     text: 'Ruas estreitas, fontes, castelo e património histórico num dos passeios mais bonitos do Alto Alentejo.',
-    image: '/assets/castelo-de-vide.jpg',
+    image: asset('castelo-de-vide.jpg'),
     map: 'https://www.google.com/maps/search/?api=1&query=Castelo+de+Vide+Portugal',
   },
 ];
@@ -193,7 +195,7 @@ export default function App() {
 
       <section id="home" className="hero">
         <div className="hero-media" aria-hidden="true">
-          <ImageWithFallback src="/assets/outside-3.png" alt="Piscina e exterior da Alma d'Vide" />
+          <ImageWithFallback src={asset('outside-3.png')} alt="Piscina e exterior da Alma d'Vide" />
         </div>
         <div className="hero-overlay" />
         <div className="hero-content">
@@ -267,7 +269,7 @@ export default function App() {
       </section>
 
       <section className="quote-band">
-        <div className="quote-background"><ImageWithFallback src="/assets/outside-2.png" alt="Exterior Alma d'Vide" /></div>
+        <div className="quote-background"><ImageWithFallback src={asset('outside-2.png')} alt="Exterior Alma d'Vide" /></div>
         <div className="quote-overlay" />
         <div className="quote-inner container">
           <Sparkles size={24} strokeWidth={1.2} />
@@ -303,7 +305,7 @@ export default function App() {
 
       <section className="slow-section section-pad">
         <div className="container slow-grid">
-          <div className="slow-image"><ImageWithFallback src="/assets/outside-3.png" alt="Alma d'Vide" /></div>
+          <div className="slow-image"><ImageWithFallback src={asset('outside-3.png')} alt="Alma d'Vide" /></div>
           <div className="slow-copy">
             <span className="eyebrow">O ALENTEJO À PORTA</span>
             <h2>O plano também pode ser não ter plano.</h2>
